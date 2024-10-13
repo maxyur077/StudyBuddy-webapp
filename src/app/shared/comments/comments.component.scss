@@ -1,0 +1,23 @@
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  .comment-owner {
+    display: flex;
+    gap: 0.5rem;
+    .profile-pic {
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid;
+    }
+    .comment-name {
+      line-height: 1;
+    }
+  }
+  .comment {
+    display: flex;
+    font-size: 14px;
+    padding: 0 1.5rem;
+  }
+}

@@ -1,0 +1,127 @@
+<div class="container">
+  <h2>Get Started</h2>
+
+  <!-- Error message display -->
+  <div id="error-message" class="error-message"></div>
+
+  <!-- Sign-up form -->
+  <form [formGroup]="onBoardingForm" (ngSubmit)="onSubmit()" id="signup-form">
+    <!-- Gender selection -->
+    <div class="section">
+      <label class="section-title">Select your gender:</label>
+      <div class="options-container">
+        <select formControlName="gender" id="gender" required>
+          <option value="" disabled selected hidden>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div
+        *ngIf="
+          onBoardingForm.get('gender')?.touched &&
+          onBoardingForm.get('gender')?.invalid
+        "
+        class="error"
+      >
+        Gender is required
+      </div>
+    </div>
+
+    <!-- Date of Birth -->
+    <div class="section datepicker">
+      <label class="section-title">Date of Birth:</label>
+      <input type="date" formControlName="dob" id="DOB" required />
+      <div
+        *ngIf="
+          onBoardingForm.get('dob')?.touched &&
+          onBoardingForm.get('dob')?.invalid
+        "
+        class="error"
+      >
+        Date of Birth is required
+      </div>
+    </div>
+
+    <!-- Country selection -->
+    <div class="section">
+      <label class="section-title">Select your Country:</label>
+      <div class="options-container">
+        <select formControlName="country" id="country" required>
+          <option value="" disabled selected hidden>Select Country</option>
+          <option value="India">India</option>
+          <option value="United States">United States</option>
+          <option value="Russia">Russia</option>
+          <option value="Germany">Germany</option>
+          <option value="Ukraine">Ukraine</option>
+        </select>
+      </div>
+      <div
+        *ngIf="
+          onBoardingForm.get('country')?.touched &&
+          onBoardingForm.get('country')?.invalid
+        "
+        class="error"
+      >
+        Country is required
+      </div>
+    </div>
+
+    <!-- State selection -->
+    <div class="section">
+      <label class="section-title">Select your state:</label>
+      <div class="options-container">
+        <select formControlName="state" id="state" required>
+          <option value="" disabled selected hidden>Select State</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Banglore">Bangalore</option>
+        </select>
+      </div>
+      <div
+        *ngIf="
+          onBoardingForm.get('state')?.touched &&
+          onBoardingForm.get('state')?.invalid
+        "
+        class="error"
+      >
+        State is required
+      </div>
+    </div>
+
+    <!-- City selection -->
+    <div class="section">
+      <label class="section-title">Select your City:</label>
+      <div class="options-container">
+        <select formControlName="city" id="city" required>
+          <option value="" disabled selected hidden>Select City</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="pune">Pune</option>
+        </select>
+      </div>
+      <div
+        *ngIf="
+          onBoardingForm.get('city')?.touched &&
+          onBoardingForm.get('city')?.invalid
+        "
+        class="error"
+      >
+        City is required
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <button
+      type="submit"
+      class="submit-btn"
+      [disabled]="onBoardingForm.invalid"
+    >
+      Next
+    </button>
+  </form>
+
+  <!-- Already have an account -->
+  <p>Already have an account? <a href="#">Log In</a></p>
+</div>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <!--Up nav-->
+    <div class="topnav">
+        
+        <a class="active" (click)="openNav()">☰☰</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="topnav-right">
+          <a href="#search">Search</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+
+  <!--Side Navbar-->
+    <div id="sideNav" class="sidenav">
+        <button class="closebtn" (click)="closeNav()">&times;</button>
+        <div class="nav-item">
+          <p>Pages</p>
+          <p class="nav-subitem">Tech Education Hub</p>
+          <span class="arrow">&gt;</span>
+        </div>
+        <div class="nav-item">
+          <p>Sites</p>
+          <p class="nav-subitem">educational technology</p>
+          <span class="arrow">&gt;</span>
+        </div>
+        <div class="nav-item">
+          <p>Account</p>
+          <p class="nav-subitem">angryhulk8888</p>
+          <span class="arrow">&gt;</span>
+        </div>
+        <div class="nav-item">
+          <p>Extensions</p>
+          <span class="arrow">&gt;</span>
+        </div>
+        <div class="nav-item">
+          <p>Help</p>
+          <span class="arrow">&gt;</span>
+        </div>
+      </div>
+      <div class="container">
+        <!-- Block-Type Section -->
+        <div class="block-section">
+          <h2>Block Section</h2>
+          <p>This is a block-type section for general content.</p>
+        </div>
+         <!-- Card-Type Section for Comments and Posts -->
+  <div class="card-section">
+    <h2>Comments and Posts</h2>
+    <div class="post-container">
+        <!-- Close Button -->
+        <div class="close-btn">&times;</div>
+        
+        <!-- Post Title and Options -->
+        <div class="post-header">
+          <input type="text" class="post-title" placeholder="Post Title" />
+        </div>
+        
+        <!-- Text Formatting Options -->
+        <div class="formatting-tools">
+          <button><b>B</b></button>
+          <button><i>I</i></button>
+          <button>&#x1f517;</button>
+          <button>&#x1f4cb;</button>
+          <button>&#x1f4f7;</button>
+          <button>&#x1f517;</button>
+        </div>
+        
+        <!-- Text Area -->
+        <textarea class="post-content" placeholder="Express your thoughts here."></textarea>
+        
+        <!-- Tag Selection -->
+        <div class="tag-selection">
+          <p>Select appropriate tag relevant to your thought:</p>
+          <button class="tag-btn">Action Idea</button>
+          <button class="tag-btn">Question</button>
+          <button class="tag-btn">Manager Mantras</button>
+        </div>
+        
+        <!-- User Info -->
+        <div class="user-info">
+          <img src="profile-pic.png" alt="Profile" class="user-pic" />
+          <div class="user-details">
+            <p>Rupak</p>
+            <p class="user-handle">beast4</p>
+          </div>
+        </div>
+        
+        <!-- Post Now Button -->
+        <div class="post-now">
+          <button>Post Now</button>
+        </div>
+      </div>
+      
+    <div class="card">
+      <h3>Comment Title</h3>
+      <p>This is a sample comment. You can add more comments or posts here.</p>
+    </div>
+  </div>
+
+  <!-- Calendar Section for Scheduling Events -->
+  <div class="calendar-section">
+    <h2>Upcoming Events</h2>
+    <div id="calendar"></div>
+  </div>
+</div>
+
+    
+</body>
+</html>

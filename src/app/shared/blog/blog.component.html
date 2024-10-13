@@ -1,0 +1,19 @@
+<div class="blog-wrapper">
+  <div class="blog" *ngFor="let blog of blogs">
+    <div class="blog-body">
+      <span *ngFor="let letter of blog.blog; let i = index"
+        ><p *ngIf="i >= 100">{{ blog.blog }}</p>
+        <span *ngIf="i <= 100">...</span></span
+      >
+      <span *ngIf="blog.blog.length > 100" style="color: grey; cursor: pointer"
+        >Read More</span
+      >
+    </div>
+    <div class="comment-wrapper">
+      <app-comments
+        *ngFor="let comment of blog.comments"
+        [comment]="comment"
+      ></app-comments>
+    </div>
+  </div>
+</div>

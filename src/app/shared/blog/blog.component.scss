@@ -1,0 +1,28 @@
+.blog-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 24px;
+  .blog {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 18px;
+    border: 1px solid;
+    .blog-body {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .comment-wrapper {
+      border-top: 1px solid #e1e1e1;
+      padding: 12px 18px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow: auto;
+      max-height: calc(100% / 3 - 24px);
+    }
+  }
+}
