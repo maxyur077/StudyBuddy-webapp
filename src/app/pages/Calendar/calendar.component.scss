@@ -1,0 +1,237 @@
+:root {
+  --header-height: 42px;
+  --total-weeks: 6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  height: 90vh;
+  overflow: auto;
+}
+
+.cell-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.appointment {
+  position: relative;
+  z-index: 9;
+  padding: 5px 10px;
+  margin-top: 2px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lavender;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: normal; /* Allows text to wrap */
+  word-wrap: break-word; /* Breaks long words to prevent overflow */
+  align-items: flex-start; /* Aligns text to the top inside each appointment */
+
+  span {
+    text-align: left;
+    line-height: 15px;
+    display: block;
+    width: 100%; 
+  }
+}
+
+.calendar-view-month {
+  table-layout: fixed;
+  margin-top: 1rem;
+
+  thead {
+    th {
+      font-size: 22px;
+      font-weight: 100;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        &:first-child {
+          border-left: 1px solid #ddd;
+        }
+
+        vertical-align: top;
+        position: relative;
+        border-right: 1px solid #ddd;
+        height: 150px;
+        border-bottom: 1px solid #ddd;
+        padding: 3px 0;
+
+        &.selected {
+          background-color: #bbdefb;
+        }
+
+        &.today {
+          background-color: #e3f2fd;
+        }
+
+        .date {
+          text-align: right;
+          font-size: 22px;
+          font-weight: 100;
+          padding: 5px 10px 0;
+        }
+      }
+    }
+  }
+}
+
+/* Similar for calendar-view-week and calendar-view-day */
+.calendar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--header-height);
+    padding: 10px 0;
+
+    h2 {
+      margin: 0;
+    }
+
+    .calendar-month {
+      font-weight: bold;
+
+      span {
+        font-weight: 100;
+      }
+    }
+
+    .calendar-controls {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.black-icon {
+  color: black;
+
+  svg {
+    fill: black;
+  }
+}
+
+/* Media Queries for different screen sizes */
+
+/* Mobile devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .calendar-controls {
+      margin-top: 10px;
+    }
+  }
+
+  .appointment {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+
+  .calendar-view-month thead th,
+  .calendar-view-week thead th {
+    font-size: 16px;
+  }
+
+  .calendar-view-month tbody td,
+  .calendar-view-week tbody td {
+    height: 100px;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .appointment {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .calendar-view-month thead th,
+  .calendar-view-week thead th {
+    font-size: 18px;
+  }
+
+  .calendar-view-month tbody td,
+  .calendar-view-week tbody td {
+    height: 120px;
+  }
+}
+
+/* Laptops (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .appointment {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .calendar-view-month thead th,
+  .calendar-view-week thead th {
+    font-size: 20px;
+  }
+
+  .calendar-view-month tbody td,
+  .calendar-view-week tbody td {
+    height: 130px;
+  }
+}
+
+/* Desktops (1025px and above) */
+@media only screen and (min-width: 1025px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .appointment {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .calendar-view-month thead th,
+  .calendar-view-week thead th {
+    font-size: 22px;
+  }
+
+  .calendar-view-month tbody td,
+  .calendar-view-week tbody td {
+    height: 150px;
+  }
+}

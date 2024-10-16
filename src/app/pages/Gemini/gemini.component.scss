@@ -1,0 +1,70 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #080808;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    height: 80vh; /* Set height for the chat container */
+    position: relative; /* For absolute positioning of input */
+}
+
+.chat-body {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 10px; /* Space for input box */
+}
+
+.user-message {
+    background-color: #5d5d5e; /* Blue for user messages */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    align-self: flex-end; /* Aligns user messages to the right */
+}
+
+.bot-response {
+    background-color: #535252; /* Red for bot responses */
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    align-self: flex-start; /* Aligns bot messages to the left */
+}
+
+.user-input-container {
+    display: flex;
+    width: 100%;
+    position: absolute; /* Fix position at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+    padding: 10px; /* Add padding for aesthetics */
+    background-color: #f9f9f9; /* Same background color as container */
+}
+
+.user-input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.user-input-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-input-container button:disabled {
+    background-color: #ccc;
+}

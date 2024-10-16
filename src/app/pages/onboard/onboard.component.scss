@@ -1,82 +1,106 @@
 /* General container styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #9eb4ff;
+    font-family: "Poppins", sans-serif;
+    /* background-color: #9eb4ff; */
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    overflow: hidden; // Prevent scrolling
-    height: 100vh; // Ensure body takes full viewport height to prevent extra space
-}
-
-.container {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* html,
+  body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  .container {
     background-color: white;
     padding: 35px;
     border-radius: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    margin: 23px;
-}
-
-h2 {
+    max-width: 530px;
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Heading */
+  h2 {
     text-align: center;
     color: #333;
     margin-bottom: 5px;
     font-weight: 600;
-}
-
-/* Form styling */
-form {
+  }
+  
+  /* Form styling */
+  form {
     display: flex;
     flex-direction: column;
-}
-
-
-.section {
+    width: 100%;
+  }
+  
+  /* Section styling */
+  .section {
     margin-bottom: 20px;
-}
-
-.section-title {
+  }
+  
+  .section-title {
     font-weight: 600;
     margin-bottom: 10px;
     color: #333;
     font-size: 15px;
-}
-
-/* Input styles */
-input[type="date"],
-select,
-.mat-form-field {
+  }
+  
+  /* Input styles */
+  input[type="date"],
+  select,
+  .mat-form-field {
     padding: 12px;
     margin-bottom: -6px;
     border-radius: 5px;
     border: 1px solid #2c2b2b;
     font-size: 14px;
     color: #555;
-    width: calc(100% - 24px); // Adjust for padding and border
+    width: calc(100% - 24px); /* Adjust for padding and border */
     cursor: pointer;
-    box-sizing: border-box; // Include padding and border in element's total width and height
-}
-
-input[type="date"]:focus,
-select:focus,
-.mat-form-field input:focus {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  input[type="date"]:focus,
+  select:focus,
+  .mat-form-field input:focus {
     outline: none;
     border-color: #007bff;
-}
-
-/* Error message styling */
-.error-message {
+  }
+  
+  .error {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  /* Error message styling */
+  /* .error-message {
     color: red;
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px;
-}
-
-/* Submit button styling */
-.submit-btn {
+  } */
+  
+  /* Submit button styling */
+  .submit-btn {
     padding: 12px;
     background-color: #007bff;
     color: white;
@@ -88,37 +112,38 @@ select:focus,
     font-weight: bold;
     margin-top: -5px;
     width: 93%;
-}
-
-.submit-btn:hover {
+  }
+  
+  .submit-btn:hover {
     background-color: #0056b3;
-}
-
-/* Link styling */
-p {
+  }
+  
+  /* Link styling */
+  p {
     text-align: center;
     margin-top: 20px;
-}
-
-a {
+  }
+  
+  a {
     color: #007bff;
     text-decoration: none;
-}
-
-a:hover {
+  }
+  
+  a:hover {
     text-decoration: underline;
-}
-
-input[type="tel"]{
+  }
+  
+  input[type="tel"] {
     background-color: #ffffff;
     border: 1px solid #2c2b2b;
     padding: 10px 15px;
     font-size: 16px;
     border-radius: 8px;
     width: 85%;
-}
-
-input[type="tel"]:focus{
+  }
+  
+  input[type="tel"]:focus {
     outline: none;
     border-color: #007bff;
-}
+  }
+  

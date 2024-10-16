@@ -3,8 +3,8 @@
     <div class="blog-body">
       <span *ngFor="let letter of blog.blog; let i = index"
         ><p *ngIf="i >= 100">{{ blog.blog }}</p>
-        <span *ngIf="i <= 100">...</span></span
-      >
+        <span *ngIf="i <= 100">...</span></span>
+        <button>Add Post</button><br>
       <span *ngIf="blog.blog.length > 100" style="color: grey; cursor: pointer"
         >Read More</span
       >

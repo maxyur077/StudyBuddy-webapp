@@ -1,117 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-</head>
-<body>
-    <!--Up nav-->
-    <div class="topnav">
-        
-        <a class="active" (click)="openNav()">☰☰</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <div class="topnav-right">
-          <a href="#search">Search</a>
-          <a href="#about">About</a>
-        </div>
-      </div>
+<title>StudyBuddy</title>
+    <!------ Font Awesome ------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!------ Google Fonts ------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--Side Navbar-->
-    <div id="sideNav" class="sidenav">
-        <button class="closebtn" (click)="closeNav()">&times;</button>
-        <div class="nav-item">
-          <p>Pages</p>
-          <p class="nav-subitem">Tech Education Hub</p>
-          <span class="arrow">&gt;</span>
-        </div>
-        <div class="nav-item">
-          <p>Sites</p>
-          <p class="nav-subitem">educational technology</p>
-          <span class="arrow">&gt;</span>
-        </div>
-        <div class="nav-item">
-          <p>Account</p>
-          <p class="nav-subitem">angryhulk8888</p>
-          <span class="arrow">&gt;</span>
-        </div>
-        <div class="nav-item">
-          <p>Extensions</p>
-          <span class="arrow">&gt;</span>
-        </div>
-        <div class="nav-item">
-          <p>Help</p>
-          <span class="arrow">&gt;</span>
-        </div>
-      </div>
-      <div class="container">
-        <!-- Block-Type Section -->
-        <div class="block-section">
-          <h2>Block Section</h2>
-          <p>This is a block-type section for general content.</p>
-        </div>
-         <!-- Card-Type Section for Comments and Posts -->
-  <div class="card-section">
-    <h2>Comments and Posts</h2>
-    <div class="post-container">
-        <!-- Close Button -->
-        <div class="close-btn">&times;</div>
-        
-        <!-- Post Title and Options -->
-        <div class="post-header">
-          <input type="text" class="post-title" placeholder="Post Title" />
-        </div>
-        
-        <!-- Text Formatting Options -->
-        <div class="formatting-tools">
-          <button><b>B</b></button>
-          <button><i>I</i></button>
-          <button>&#x1f517;</button>
-          <button>&#x1f4cb;</button>
-          <button>&#x1f4f7;</button>
-          <button>&#x1f517;</button>
-        </div>
-        
-        <!-- Text Area -->
-        <textarea class="post-content" placeholder="Express your thoughts here."></textarea>
-        
-        <!-- Tag Selection -->
-        <div class="tag-selection">
-          <p>Select appropriate tag relevant to your thought:</p>
-          <button class="tag-btn">Action Idea</button>
-          <button class="tag-btn">Question</button>
-          <button class="tag-btn">Manager Mantras</button>
-        </div>
-        
-        <!-- User Info -->
-        <div class="user-info">
-          <img src="profile-pic.png" alt="Profile" class="user-pic" />
-          <div class="user-details">
-            <p>Rupak</p>
-            <p class="user-handle">beast4</p>
-          </div>
-        </div>
-        
-        <!-- Post Now Button -->
-        <div class="post-now">
-          <button>Post Now</button>
-        </div>
-      </div>
+<!------ Scroll To Top Button ------>
+<button id="scroll-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<!------ Header ------>
+<header>
+  <nav>
+    <div class="logo-container">
+      <a href="#home" id="logo">
+        <img src="../../../assets/studybuddy.png" alt="StudyBuddy Logo" />
+        <span class="study">Study</span><span class="buddy">Buddy</span>
+        <!-- <img src="../../../assets/studybuddy.png" alt="StudyBuddy Logo" /> -->
+      </a>
       
-    <div class="card">
-      <h3>Comment Title</h3>
-      <p>This is a sample comment. You can add more comments or posts here.</p>
+    </div>
+    <i class="fas fa-bars" id="ham-menu"></i>
+    <ul id="nav-bar">
+      <li>
+        <a routerLink="/login">Login</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!------ Section: Hero ------>
+<section class="hero" id="home">
+  <img src="../../../assets/header-shape.svg" id="header-shape" />
+  <div class="hero-content">
+    <h1>Let's Make Learning Fun</h1>
+    <h4>Personalized Study Platform for Students</h4>
+    <p>
+      Access dashboards, ask questions, schedule exams, and share notes with
+      peers on studyBuddy.
+    </p>
+    <div class="btn-container">
+      <!--<button class="primary-btn btn">Start Learning</button>
+     <button class="secondary-btn btn">Explore More</button> -->
     </div>
   </div>
-
-  <!-- Calendar Section for Scheduling Events -->
-  <div class="calendar-section">
-    <h2>Upcoming Events</h2>
-    <div id="calendar"></div>
+  <div class="hero-img">
+    <img src="../../../assets/hero-image.svg" />
   </div>
-</div>
+</section>
 
-    
-</body>
-</html>
+<!-- section: dashboard -->
+<section class="dash">
+  <div class="dash-head">
+   
+  </div>
+  <div class="dashboard">
+    <div class="dash-img">
+      <img src="../../../assets/dashboard1.png" alt="dashboard" />
+    </div>
+    <div class="right-para">
+      <h4>Personalized Dashboard Access</h4>
+      <p>
+        Students can log in to StudyBuddy to access their personalized<br />
+        dashboards, ensuring a tailored study experience.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!------ Section: AI prompt ------>
+<section class="AI-prompt">
+  <div class="prompt">
+    <div class="left-para">
+      <h4>Interactive Question Prompt</h4>
+      <p>
+        Engage with Gemini and fellow students by asking questions and<br />
+        receiving responses on StudyBuddy.
+      </p>
+    </div>
+    <div class="AI-img">
+      <img src="../../../assets/AI_prompt.png" alt="AI-prompt" />
+    </div>
+  </div>
+</section>
+
+<!-- section: schedule -->
+<section class="schedule">
+  <div class="planning">
+    <div class="plan-img">
+      <img src="../../../assets/Students.png" alt="schedule" />
+    </div>
+    <div class="para">
+      <h4>Efficient Exam Scheduling</h4>
+      <p>
+        Use the calendar feature to schedule and view upcoming exams, <br />
+        with important dates highlighted in red for timely reminders.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!------ Section: Features ------>
+<section class="features" id="features">
+  <h2>Why Choose Us</h2>
+  <p class="section-desc">
+    Dedicated honors student with proven academic and extracurricular
+    success. <br />Experience working across higher education departments
+    alongside faculty members and students. <br />Strong leadership and
+    communication abilities
+  </p>
+  <div class="row">
+    <div class="column">
+      <i class="fas fa-book"></i>
+      <h3>Balanced Studies</h3>
+      <p>
+        Balancing studies across all subjects requires a consistent,
+        strategic approach to effectively manage workload and achieve
+        success.
+      </p>
+    </div>
+    <div class="column">
+      <i class="fas fa-users"></i>
+      <h3>Collaborative Note Sharing</h3>
+      <p>
+        Sharing notes helps students learn collaboratively, ensuring
+        everyone benefits from different perspectives and important
+        information.
+      </p>
+    </div>
+    <div class="column">
+      <i class="fas fa-robot"></i>
+      <h3>AI Assistance</h3>
+      <p>
+        AI can provide quick and accurate responses to a wide range of
+        questions, offering insights and solutions in seconds.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- section: community -->
+<section class="community">
+  <div class="container">
+    <h1>Contact Us<span class="dot">.</span></h1>
+    <p class="quote">
+      "StudyBuddy revolutionized how I study and interact with classmates."
+      - Oliver Williams
+    </p>
+    <div class="form-container">
+      <input type="email" placeholder="Enter your email..." id="email" />
+      <button id="get-started">Get Started</button>
+    </div>
+  </div>
+</section>
+
+<!------ Footer ------>
+<footer>
+  <p>
+    Product build by Legions.
+  </p>
+</footer>

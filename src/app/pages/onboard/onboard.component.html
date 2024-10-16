@@ -5,7 +5,11 @@
   <div id="error-message" class="error-message"></div>
 
   <!-- Sign-up form -->
-  <form [formGroup]="onBoardingForm" (ngSubmit)="onSubmit()" id="signup-form">
+  <form
+    [formGroup]="onBoardingForm"
+    (ngSubmit)="onSubmit()"
+    id="signup-form"
+  >
     <!-- Gender selection -->
     <div class="section">
       <label class="section-title">Select your gender:</label>
@@ -19,9 +23,9 @@
       </div>
       <div
         *ngIf="
-          onBoardingForm.get('gender')?.touched &&
-          onBoardingForm.get('gender')?.invalid
-        "
+      onBoardingForm.get('gender')?.touched &&
+      onBoardingForm.get('gender')?.invalid
+    "
         class="error"
       >
         Gender is required
@@ -34,9 +38,9 @@
       <input type="date" formControlName="dob" id="DOB" required />
       <div
         *ngIf="
-          onBoardingForm.get('dob')?.touched &&
-          onBoardingForm.get('dob')?.invalid
-        "
+      onBoardingForm.get('dob')?.touched &&
+      onBoardingForm.get('dob')?.invalid
+    "
         class="error"
       >
         Date of Birth is required
@@ -58,9 +62,9 @@
       </div>
       <div
         *ngIf="
-          onBoardingForm.get('country')?.touched &&
-          onBoardingForm.get('country')?.invalid
-        "
+      onBoardingForm.get('country')?.touched &&
+      onBoardingForm.get('country')?.invalid
+    "
         class="error"
       >
         Country is required
@@ -82,9 +86,9 @@
       </div>
       <div
         *ngIf="
-          onBoardingForm.get('state')?.touched &&
-          onBoardingForm.get('state')?.invalid
-        "
+      onBoardingForm.get('state')?.touched &&
+      onBoardingForm.get('state')?.invalid
+    "
         class="error"
       >
         State is required
@@ -103,9 +107,9 @@
       </div>
       <div
         *ngIf="
-          onBoardingForm.get('city')?.touched &&
-          onBoardingForm.get('city')?.invalid
-        "
+      onBoardingForm.get('city')?.touched &&
+      onBoardingForm.get('city')?.invalid
+    "
         class="error"
       >
         City is required

@@ -15,7 +15,7 @@ const routes: Routes = [
       import('./pages/onboard/onboard.component').then(
         (c) => c.OnboardComponent
       ),
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
   },
   {
     path: 'community',
@@ -23,12 +23,25 @@ const routes: Routes = [
       import('./pages/community/community.component').then(
         (c) => c.CommunityComponent
       ),
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
   },
+  {
+    path: 'gemini',
+    loadComponent: () =>
+      import('./pages/Gemini/gemini.component').then((c) => c.GeminiComponent),
+    // canActivate: [AuthGuard],
+  },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./pages/home/home.component').then((c) => c.HomeComponent),
+    // canActivate: [AuthGuard],
+  },
+
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'login',
+    redirectTo: 'home',
   },
 ];
 

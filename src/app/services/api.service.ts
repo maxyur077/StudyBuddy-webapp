@@ -22,4 +22,7 @@ export class ApiService {
   getGeminiPrompt(params:any){
     return this.http.post('http://localhost:5800/ai/gemini',params)
   }
+  prompts(params:any){
+    return this.http.post('http://localhost:5800/ai/prompts',params)
+  }
 }

@@ -1,0 +1,26 @@
+<div class="chat-container">
+  <div class="chat-body">
+    <div class="chat-box" *ngFor="let message of messages">
+      <!-- User Input (Blue Block) -->
+       <br>
+      <div class="user-message" *ngIf="message.user">
+        <p>{{ message.user }}</p>
+      </div>
+<br>
+      <!-- Bot Response (Red Block) -->
+      <div class="bot-response" *ngIf="message.bot">
+        <p>{{ message.bot }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-input-container">
+    <input
+      type="text"
+      [(ngModel)]="userInput"
+      placeholder="Type your message here..."
+      (keydown.enter)="sendMessage()"
+    />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
