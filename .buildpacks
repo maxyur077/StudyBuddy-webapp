@@ -1,0 +1,3 @@
+
+echo "https://github.com/Scalingo/nodejs-buildpack" > .buildpacks
+echo "https://github.com/Scalingo/nginx-buildpack" >> .buildpacks
