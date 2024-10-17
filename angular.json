@@ -69,6 +69,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+               "optimization": false,
               "browserTarget": "webapp:build:production"
             },
             "development": {
